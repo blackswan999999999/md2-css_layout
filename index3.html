@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            position: fixed;
+            height: 50px;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: yellow;
+        }
+
+        .main {
+            margin-top: 50px;
+            display: flex;
+            height: 1000px;
+
+        }
+
+        .main .sidebarL {
+            flex-basis: 20%;
+            background-color: rgb(226, 97, 97);
+
+        }
+        .main .content{
+            flex-basis: 60%;
+            background-color: rgb(83, 83, 194);
+        }
+
+        .main .sidebarR{
+            flex-basis: 20%;
+            background-color: rgb(226, 97, 97);
+        }
+
+        @media  (max-width : 900px ) {
+        .main .sidebarL {
+                display: none;
+            }
+        .main .content{
+            flex-basis: 80%;
+            background-color: rgb(83, 83, 194);
+        }
+
+       
+        }
+
+        @media (max-width: 600px) {
+            .main .sidebarL {
+                display: none;
+            }
+        .main .content{
+            flex-basis: 100%;
+            background-color: rgb(83, 83, 194);
+        }
+
+        .main .sidebarR{
+            display: none;
+        }
+
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+
+    <div class="main">
+        <div class="sidebarL" ></div>
+        <div class="content"></div>
+        <div class="sidebarR"></div>
+    </div>
+</body>
+</html>

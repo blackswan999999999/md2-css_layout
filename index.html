@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            
+            /* commn  */
+            
+            * {
+                padding: 0;
+                box-sizing: border-box;
+                margin: 0px;
+            }
+            :root {
+                --height-bar:50px
+            }
+            
+            
+            .bar {
+                padding: 0;
+                margin: 0;
+            }
+            
+            .bar li {
+                display: inline-block;
+                line-height: var(--height-bar); 
+                padding: 0 8px;
+                position: relative;
+            }
+
+            .bar li a {
+                text-decoration: none;
+            }
+
+            
+            
+            .bar .bar-item::after {
+                 position: absolute;
+                 left: 0;
+                 content: "";
+                 border-left: 2px solid black ;
+                 height: 20px;
+                 top: 50%;
+                 transform: translateY(-50%);
+            
+             }
+
+            /* main */
+        .header {
+                width: 100%;
+                height: 150px;
+                background-color: red;
+            
+        }
+
+        .header .logo {
+            background-color: rgb(226, 148, 148);
+            height: 100%;
+            
+            width: 25%;
+            float: left;
+        }
+
+        .header .banner {
+            background-color: rgb(118, 105, 105);
+            height: 100%;
+            
+            width: 75%;
+            float: left;
+        }
+
+        
+       
+        .nav {
+           
+           /* clear: both; */
+            width: 100%;
+            height: var(--height-nav);
+            background-color: rgb(14, 210, 228);
+        }
+
+
+        
+
+
+         
+
+       .content {
+           /* clear: both; */
+            
+            height: 650px;
+            background-color: rgb(222, 230, 12);
+            margin-bottom: var(--height-bar);
+
+        }
+
+        .content  .sidebar1 {
+            width:10% ;
+            height: 100%;
+            background-color: orange;
+            float: left;
+        }
+
+        .sidebar1-child1 {
+            background-color: rgb(72, 0, 255);
+            height: 30%;
+            
+
+        }
+        .sidebar1-child2 {
+            background-color: rgb(68, 85, 85);
+            height: 40%;
+        }
+
+        .content  .main-content {
+            width:70% ;
+            height: 100%;
+            background-color: rgb(249, 249, 18);
+            float: left;
+        }
+
+
+        .content  .main-content .main-content-up {
+            width: 100%;
+            height: 25%;
+            background-color: burlywood;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+
+        .main-content-up .item-upper1 ,
+        .main-content-up .item-upper2
+         {
+            height: 80%;
+            flex-basis: 45%;
+            background-color: white;
+        }
+
+
+
+        .content  .main-content .main-content-down {
+            width: 100%;
+            height: 75%;
+            background-color: rgb(6, 228, 248);
+            display: flex;
+            flex-wrap: wrap;
+            align-content: SPACE-EVENLY;
+            /* align-items: center; */
+            /* căn giữa trên chính dòng của item => tạo khoảng trống giữa các dòng */
+            /* align-content:center; */
+            /* căn giữa cho tập hợp các dòng của item => ko tạo khoảng trống giữa các dòng */
+            justify-content:space-evenly;
+        }
+
+        .main-content-down .item-down {
+            background-color: darkmagenta;
+            height: 45%;
+            flex-basis: 30%;
+            /* margin: 5px; */
+        }
+        
+
+
+        .content  .sidebar2 {
+            width:20% ;
+            height: 100%;
+            background-color: rgb(17, 178, 222);
+            float: left;
+        }
+
+
+       .footer {
+        
+           
+            height: var(--height-bar);
+            background-color: rgb(230, 213, 215);
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            
+        }
+
+         .footer .bar-footer-item a {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo"></div>
+        <div class="banner"></div>
+    </div>
+
+    <div class="nav">
+        <ul class=" bar">
+            <li class=""> <a href="#">Home</a> </li>
+            <li class="nav-item bar-item"> <a href="#">Student</a>  </li>
+            <li class="nav-item bar-item"> <a href="#">Courses</a>  </li>
+            <li class="nav-item bar-item"> <a href="#">About Us</a>  </li>
+            <li class="nav-item bar-item"> <a href="#">Contact Us</a>  </li>
+        </ul>
+
+    </div>
+
+    <div class="content">
+        <div class="sidebar1">
+            <div class="sidebar1-child1"></div>
+            <div class="sidebar1-child2"></div>
+        </div>
+        <div class="main-content">
+            <div class="main-content-up">
+
+                <div class="item-upper1"></div>
+                <div class="item-upper2"></div>
+            </div>
+
+            <div class="main-content-down">
+            <div class="item-down"></div>
+            <div class="item-down"></div>
+            <div class="item-down"></div>
+            <div class="item-down"></div>
+            <div class="item-down"></div>
+            <div class="item-down"></div>
+            </div>
+           
+        </div>
+        <div class="sidebar2"></div>
+
+    </div>
+    <div class="footer">
+        <div class="footer-item1"> @Tapchilaptrinh </div>
+        <div class="footer-item2">
+            <ul class="  bar">
+                <li class="bar-footer-item"> <a href="#">Home</a> </li>
+                <li class="bar-footer-item bar-item"> <a href="#">Student</a>  </li>
+                <li class="bar-footer-item bar-item"> <a href="#">Courses</a>  </li>
+                <li class="bar-footer-item bar-item"> <a href="#">About Us</a>  </li>
+                <li class="bar-footer-item bar-item"> <a href="#">Contact Us</a>  </li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+</html>
